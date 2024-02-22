@@ -1,10 +1,10 @@
 **DATA BRICKS**
 - [x] generate models
 - [x] associations & validations
-- [ ] seeds
+- [x] seeds
 
 **APPLICATIVE BRICKS**
-generate empty controllers
+- [x] generate empty controllers
 
 **USER STORIES**
 *(one by one, route > controller > view)*

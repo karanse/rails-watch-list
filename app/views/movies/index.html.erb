@@ -1,0 +1,28 @@
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      <%= image_tag "movie_logo.png", alt: "logo", width: 200 %>
+    </a>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">My Lists</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">New List</a>
+          </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="banner w-100"
+     style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),
+           url(https://images.unsplash.com/photo-1574894078563-01e879b89809?q=80&w=2832&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);">
+  <div class="container">
+    <h1>TopList brings <strong>all your favoruite movies</strong> in <strong>one place</strong>!</h1>
+    <p>Start creating your custom movie lists and share with your loved ones.</p>
+    <%= link_to "Create List", "#", class: "btn btn-flat" %>
+  </div>
+</div>

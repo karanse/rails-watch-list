@@ -13,8 +13,26 @@
 require "json"
 require "open-uri"
 
-url = "https://tmdb.lewagon.com/movie/top_rated"
+puts "Cleaning database..."
+Movie.destroy_all
+
+# puts "Creating restaurants..."
+url = "https://tmdb.lewagon.com/movie/popular"
+img_url = "https://image.tmdb.org/t/p/w500/"
 data_serialized = URI.open(url).read
 # puts "#{data_serialized.class}"
 results = JSON.parse(data_serialized)
-puts "#{results["results"][0]}"
+movies = results["results"]
+
+movies.each do |movie|
+  Movie.create(title: movie['title'],
+               overview: movie['overview'],
+               poster_url: "#{img_url}#{movie['poster_path']}",
+               rating: movie['vote_average'])
+end
+puts "Finished!"
+
+# puts "#{results["results"][0]["original_title"]}"
+# puts "#{results["results"][0]["overview"]}"
+# puts "#{results["results"][0]["vote_average"]}"
+# puts"#{img_url}#{results["results"][0]["poster_path"]}"
