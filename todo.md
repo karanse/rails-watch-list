@@ -13,3 +13,5 @@
 - [x] lists#show
 - [ ] bookmarks#new & bookmarks#create
 - [ ] bookmarks#destroy
+
+[Link to css sketch](https://excalidraw.com/#json=heIhrTwya8mvRVVxXwBNK,d1VXK8rIIlvkTGrGEnuHnw)
