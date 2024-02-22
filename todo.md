@@ -8,8 +8,8 @@
 
 **USER STORIES**
 *(one by one, route > controller > view)*
-- [ ] lists#index
-- [ ] lists#new & lists#create
-- [ ] lists#show
+- [x] lists#index
+- [x] lists#new & lists#create
+- [x] lists#show
 - [ ] bookmarks#new & bookmarks#create
 - [ ] bookmarks#destroy
