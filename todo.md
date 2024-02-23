@@ -11,7 +11,7 @@
 - [x] lists#index
 - [x] lists#new & lists#create
 - [x] lists#show
-- [ ] bookmarks#new & bookmarks#create
+- [x] bookmarks#new & bookmarks#create
 - [ ] bookmarks#destroy
 
 [Link to css sketch](https://excalidraw.com/#json=heIhrTwya8mvRVVxXwBNK,d1VXK8rIIlvkTGrGEnuHnw)
