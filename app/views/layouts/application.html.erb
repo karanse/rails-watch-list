@@ -11,25 +11,27 @@
   </head>
 
   <body>
-    <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">
-          <%= image_tag "movie_logo.png", alt: "logo", width: 200 %>
-        </a>
+    <main>
+      <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <%= image_tag "movie_logo.png", alt: "logo", width: 200 %>
+          </a>
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto">
-          <li class="nav-item active">
-             <%= link_to "My Lists", root_path, class: "nav-link" %>
-          </li>
-          <li class="nav-item">
-             <%= link_to "New List", new_list_path , class: "nav-link" %>
-          </li>
-      </ul>
-    </div>
-  </div>
-</div>
 
-    <%= yield %>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item active">
+              <%= link_to "My Lists", root_path, class: "nav-link" %>
+            </li>
+            <li class="nav-item">
+              <%= link_to "New List", new_list_path , class: "nav-link" %>
+            </li>
+          </ul>
+        </div>
+         </div>
+      </div>
+      <%= yield %>
+    </main>
   </body>
 </html>
