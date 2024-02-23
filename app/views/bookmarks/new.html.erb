@@ -1,6 +1,7 @@
 <div class="container py-5">
   <h1>Add a new movie to <%= @list.name %></h1>
   <%= simple_form_for [@list, @bookmark] do |f| %>
+    <%= f.association :movie %>
     <%= f.input :comment %>
     <%= f.submit "Add movie", class: "btn btn-flat" %>
   <% end %>
