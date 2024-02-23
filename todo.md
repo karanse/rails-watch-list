@@ -11,6 +11,7 @@
 - [x] lists#index
 - [x] lists#new & lists#create
 - [x] lists#show
+- [x] lists#destroy
 - [x] bookmarks#new & bookmarks#create
 - [ ] bookmarks#destroy
 

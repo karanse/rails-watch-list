@@ -9,9 +9,10 @@
       <button type="button" class="btn btn-flat">
         <%= link_to "Add Movie", new_list_bookmark_path(@list) %>
       </button>
-      <a class="btn btn-cancel" data-turbo-method="delete"
-         data-turbo-confirm="Are you sure you want to delete this list?"
-         href="#">Delete List</a>
+      <button class= "btn btn-flat">
+        <%= link_to "Delete List", @list,
+            data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+      </button>
     </div>
   </div>
   <div class="row">

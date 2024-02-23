@@ -21,6 +21,12 @@ class ListsController < ApplicationController
     end
   end
 
+  def destroy
+    @list = List.find(params[:id])
+    @list.destroy!
+    redirect_to root_url, notice: "List was successfully destroyed."
+  end
+
   private
 
   def list_params
