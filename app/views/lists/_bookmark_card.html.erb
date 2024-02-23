@@ -1,10 +1,29 @@
 <% @list.bookmarks.each do |bookmark| %>
-      <div class="card" style="width: 18rem;">
-        <img src="<%= bookmark.movie.poster_url%>" class="card-img-top" alt="<%= bookmark.movie.title%>">
-        <div class="card-body">
-          <h5 class="card-title"><%= bookmark.movie.title %></h5>
-          <p class="card-text"><%= bookmark.movie.overview %></p>
-          <%= link_to "Delete", list_bookmark_path(@list, bookmark) , class: "btn btn-cancel" %>
+  <div class="card col-12 col-sm-6 mb-4" style="width: 18rem;">
+    <div class="bg-white rounded shadow h-100">
+      <img src="<%= bookmark.movie.poster_url%>" class="card-img-top" alt="<%= bookmark.movie.title%>">
+      <div class="p-3 rounded-bottom d-flex flex-column">
+        <strong><%= bookmark.movie.title %>
+          <span class="text-muted font-weight-normal">
+          • <%= bookmark.movie.rating %>
+            <i class="fas fa-star star-yellow"></i>
+          </span>
+        </strong>
+        <small class="text-muted"><%= bookmark.movie.overview %></small>
+        <div class="d-flex align-items-end justify-content-between pt-4">
+          <div>
+            <i class="fas fa-quote-left me-2"></i>
+            <small class="flex-grow-1"><%= bookmark.comment %></small>
+          </div>
+          <small class="text-right flex-shrink-0">
+            <%= link_to "delete", bookmark_path(bookmark),
+                  data: { turbo_method: :delete,
+                          turbo_confirm: "Are you sure you want to remove #{bookmark.movie.title}
+                          from your #{bookmark.list.name} list"},
+                  class: 'text-danger' %>
+          </small>
         </div>
       </div>
+    </div>
+  </div>
 <% end %>
